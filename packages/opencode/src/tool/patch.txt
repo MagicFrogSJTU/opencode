@@ -1,0 +1,17 @@
+Apply a unified diff patch to a file.
+
+Usage:
+- Provide the absolute path to the file and a valid unified diff patch string.
+- The patch must be in standard unified diff format (as produced by `diff -u` or `git diff`).
+- The file must exist before applying the patch.
+- If the patch cannot be applied cleanly, the tool will fail and the file will not be modified.
+
+Example patch format:
+```
+--- a/src/app.py
++++ b/src/app.py
+@@ -1,4 +1,4 @@
+ def greet():
+-    print("Hi")
++    print("Hello, world!")
+```
